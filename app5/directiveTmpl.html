@@ -1,0 +1,13 @@
+<li>
+  <div ng-show='edit'>
+    {{theBiz.name}}
+    {{theBiz.type}}
+  </div>
+  <div ng-hide='edit'>
+    <form ng-submit="changeBiz({id: theBiz.objectId, obj: theBiz })">
+      <input type="text" ng-model="theBiz.name">
+      <button>Submit</button>
+    </form>
+  </div>
+</li>
+<button ng-click="edit = !edit">toggle-edit</button>
